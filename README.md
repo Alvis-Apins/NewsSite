@@ -5,7 +5,7 @@ Responsive News site that lets you:
   -Publish Articles
 </pre>
 ---
-![Peek 2022-08-07 14-03](https://user-images.githubusercontent.com/104777801/183292011-78badfb0-8301-40d0-b3ab-28ceb07c3a3d.gif)
+![website](https://user-images.githubusercontent.com/104777801/183519357-f4e27888-35f4-4655-9d5e-380810af0548.gif)
 ---
 <pre>
 I have used:
