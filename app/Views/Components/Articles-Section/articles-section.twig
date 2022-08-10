@@ -1,0 +1,21 @@
+{% for article in articles %}
+  <div class="row gx-0" style="background-color: #efefef">
+    <div class="container w-25 p-3">
+      <div class="bg-image hover-overlay ripple shadow-2-strong rounded-5" data-mdb-ripple-color="light">
+        <img src={{ article.image }} class="img-fluid"/>
+      </div>
+    </div>
+
+    <div class="container w60 p-3 col-md-8 mb-8">
+      <span class="badge bg-danger px-2 py-1 shadow-1-strong mb-3">{{ article.published }}</span>
+      <span class="badge bg-danger px-2 py-1 shadow-1-strong mb-3">{{ article.source }}</span>
+      <h4><strong>{{ article.title }}</strong></h4>
+      <p class="text-muted">
+        {{ article.content }}
+      </p>
+      <a href="{{ article.link }}" class="btn btn-outline-success" target="_blank">Read more</a>
+    </div>
+  </div>
+{% endfor %}
+
+

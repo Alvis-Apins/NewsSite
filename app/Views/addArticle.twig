@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Latvijas ziņu kopsavilkums</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <style>
+
+    body {
+      background-color: #c4c4c4;
+    }
+
+    .contact {
+      padding: 4%;
+      height: 300px;
+    }
+
+    .contact-form label {
+      font-weight: 600;
+    }
+
+    .contact-form button {
+      padding: 10px;
+      background: #2f4d25;
+      color: #fff;
+      font-weight: 200;
+      width: 80px;
+    }
+
+    .contact-form button:focus {
+      box-shadow: none;
+    }
+
+    .container.contact {
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+{% include 'Components/Header-Section/header-section.twig' %}
+{% include 'Components/Navigation-Bar-Section/navigation-bar-section.twig' %}
+<form action="/add-article" method="post">
+  <div class="container contact">
+    <div class="row">
+      <div class="col-md-9">
+        <div class="contact-form">
+
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="title">Title</label>
+            <div class="col-sm-10">
+              <input name="title" type="text" class="form-control" id="title" placeholder="Enter title here">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="url">Url</label>
+            <div class="col-sm-10">
+              <input name="url" type="text" class="form-control" id="url" placeholder="Enter url here">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="url">picture url</label>
+            <div class="col-sm-10">
+              <input name="picture" type="text" class="form-control" id="url" placeholder="Enter url here">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="content">Content</label>
+            <div class="col-sm-10">
+              <textarea name="content" class="form-control" rows="5" id="content"></textarea>
+            </div>
+          </div>
+          <div class="form-group">
+            <div>
+              <button type="submit" class="btn btn-outline-success">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+</body>
+</html>
